@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades y Beneficios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #f3f1f1;
+            background: url('flor.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(44, 42, 43, 0.452); /* Fondo semitransparente */
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #a33c5e;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            color: #36c919;
+            border-bottom: 2px solid #0ce617;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+       .section ul li {
+    background: rgba(90, 9, 43, 0.50); /* Color con opacidad del 80% */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+        
+
+        .motivation {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .motivation p {
+            font-size: 18px;
+            font-style: italic;
+            color: #eee3e3;
+            margin: 10px 0;
+        }
+
+        .motivation button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .motivation button:hover {
+            background: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Propiedades y Beneficios</h1>
+
+        <div class="section">
+            <h2>Propiedades de la Flor de Jamaica</h2>
+            <ul>
+                <li>Diurética: Ayuda a eliminar líquidos.</li>
+                <li>Antioxidante: Combate el envejecimiento celular.</li>
+                <li>Baja la presión arterial.</li>
+                <li>Reduce colesterol y triglicéridos.</li>
+                <li>Mejora la digestión y alivia el estreñimiento.</li>
+                <li>Antiinflamatoria y antimicrobiana.</li>
+                <li>Refrescante e hidratante.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Beneficios de Zeroflor</h2>
+            <p>Descubre cómo Zeroflor puede ayudarte a mantener un estilo de vida más saludable y equilibrado.</p>
+        </div>
+
+        <div class="motivation">
+            <h2>Frases Motivadoras</h2>
+            <p id="phrase">Haz clic en el botón para inspirarte.</p>
+            <button id="generateBtn">Generar Frase</button>
+        </div>
+    </div>
+
+    <script>
+        const phrases = [
+            "El éxito es la suma de pequeños esfuerzos repetidos día tras día.",
+            "Siempre parece imposible hasta que se hace.",
+            "La disciplina es el puente entre metas y logros.",
+            "Cada día es una nueva oportunidad para cambiar tu vida.",
+            "No importa lo lento que vayas, siempre estás adelante de quienes no lo intentan.",
+            "Confía en el proceso y nunca te rindas.",
+            "El futuro pertenece a aquellos que creen en la belleza de sus sueños."
+        ];
+
+        document.getElementById("generateBtn").addEventListener("click", function () {
+            const randomIndex = Math.floor(Math.random() * phrases.length);
+            document.getElementById("phrase").textContent = phrases[randomIndex];
+        });
+    </script>
+</body>
+</html>
